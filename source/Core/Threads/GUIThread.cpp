@@ -60,7 +60,7 @@ OperatingMode guiHandleDraw(void) {
     }
     if (currentOperatingMode != OperatingMode::Soldering && currentOperatingMode != OperatingMode::SolderingProfile) {
       // Not in soldering mode, so set this based on temp
-      if (tipTemp > 55) {
+      if (tipTemp > 200) {
         setStatusLED(LED_COOLING_STILL_HOT);
       } else {
         setStatusLED(LED_STANDBY);
